@@ -1,0 +1,90 @@
+div.log-frame{
+  img{
+      display:block;
+      margin: 20px auto;
+  }
+  h3{
+      text-align: center;
+      color:$brown;
+      font-size: $h3-fz;
+  }
+
+  div.login-window{
+      width:300px;
+      margin: 20px auto;
+      padding:30px 15px;
+      box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+      border-top:3px solid #FF5E45;
+      border-radius: 3px;
+      position: relative;
+
+      h3{
+          font-size: 24px;
+          font-weight: 700;
+          padding-bottom:30px;
+      }
+
+      label{
+          color:$brown;
+      }
+
+      a.hint{
+          color:$orange;
+          display:inline-block;
+          margin: 5px 0 20px 0;
+      }
+
+
+
+      input[type="text"],input[type="password"]{
+          width:250px;
+          height:22px;
+          border:1px solid #ccc;
+          outline: none;
+      }
+
+      i{
+          color:#d6d6d6;
+          position:absolute;
+          left:7%;
+      }
+
+      i.lock{
+          top:57%;
+      }
+
+      i.no-show{
+          display:none;
+      }
+
+      div.btn-item{
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 20px;
+
+          button.btn{
+              border:none;
+              width: 80px;
+              height: 30px;
+              border-radius: 5px;
+              cursor: pointer;
+          }
+          button.btn-cancel{
+              margin-right:10px;
+              background: #a09e9e;
+              color:#fff;
+          }
+          button.btn-enter{
+              background:#F56C23;
+              color:#fff;
+
+              &:hover{
+                  background:#fff;
+                  color:#F56C23;
+                  transform: scale(1.05)
+              }
+          }
+      }
+
+  }
+}

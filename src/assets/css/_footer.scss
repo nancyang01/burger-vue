@@ -1,0 +1,45 @@
+div.footer{
+  display: flex;
+  justify-content: space-around;
+  color:$brown;
+  padding:20px 15px;
+  h3{
+      font-size: $h3-fz;
+      padding: 10px 0;
+  }
+
+  div.footer-item{
+      width:350px;
+
+      @include iphone{
+          margin: 20px auto;
+      }
+  }
+
+
+  div.footer-logo{
+      background-image: url('/public/img/logo_l@svg.svg');
+      background-repeat: no-repeat;
+
+      .icon{
+          font-size: 30px;
+          margin-top: 50px;
+          margin-right: 10px;
+      }
+
+      .icon-fb{
+          color: #3A5795;
+      }
+      
+      .icon-twitter{
+          color:#41ABE1;
+      }
+      
+      .icon-yt{
+          color:#DB4437;
+      }
+  }
+  @include iphone{
+      display:block;
+  }
+}

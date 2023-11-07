@@ -1,0 +1,90 @@
+div.menu{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.75);
+  position: fixed;
+  width:100%;
+  z-index:10;
+
+  @include ipad{
+      padding:10px 0px;
+  }
+  
+  a.logo_item{
+      background-image: url('/public/img/logo_w@svg.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 120px;
+      height: 24px;
+      text-indent: 101%;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-left: 30px;
+
+      @include ipad{
+          margin:0 auto;
+      }
+  }
+  
+  ul.menu_bar{
+      display:flex;
+
+      li{
+          padding:0 20px;
+          a{  
+              display:block;
+              color:#fff;
+              text-decoration: none;
+              padding:10px 0px;
+              font-size: 20px;
+              border-bottom: 3px solid transparent;
+              transition: all 0.3s;
+
+              @include ipad{
+                  border-bottom: none;
+              }
+
+              &:hover{
+                  border-bottom: 3px solid #fff;
+
+                  @include ipad{
+                      border-bottom: none;
+                  }
+              }
+          }
+          @include ipad{
+              text-align: center;
+              padding-right: 30px;
+          }
+      }
+      @include ipad{
+          display:block;
+          max-height: 0px;
+          overflow: hidden;
+          transition: max-height 1s;
+          position: absolute;
+          top: 44px;
+          left:0;
+          right:0;
+          background: rgba(0, 0, 0, 0.75);
+      }
+  }
+
+  ul.menu_bar.menu-show{
+      max-height: 300px;
+  }
+
+
+  .bar{
+      color:#fff;
+      font-size: 25px;
+      display:none;
+      margin:0 10px;
+
+      @include ipad{
+          display:block;
+      }
+  }
+
+}

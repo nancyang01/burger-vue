@@ -1,0 +1,18 @@
+@import "reset";
+@import "grid";
+@import "style";
+
+@import 'navbar';
+@import 'banner';
+@import 'introduce';
+@import 'reserve';
+@import 'login';
+@import 'register';
+@import 'menu';
+@import 'checkout';
+
+@import 'footer';
+
+#app{
+  background: #efe9e7;
+}

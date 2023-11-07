@@ -1,0 +1,134 @@
+div.register-window{
+    max-width: 300px;
+    margin: 20px auto;
+    padding:30px 15px;
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+    border-top:3px solid #FF5E45;
+    border-radius: 3px;
+    @include iphone{
+        width: 300px;
+    }
+    h3{
+        font-size: 24px;
+        font-weight: 700;
+        padding-bottom:30px;
+    }
+    div.register{
+        // display: flex;
+        @include iphone{
+            display:block;
+        }
+        button.button{
+            background: none;
+            border: none;
+            color:$brown;
+            cursor: pointer;
+        }
+        div.overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+            transition: opacity 500ms;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 999;
+            &:target {
+                visibility: visible;
+                opacity: 1;
+              }
+              div.popup {
+                margin: 200px auto;
+                padding: 20px;
+                background: #fff;
+                border-radius: 5px;
+                width: 300px;
+                position: relative;
+                transition: all 5s;
+
+                div.content{
+                    line-height: 1.5;
+                }
+                button.close {
+                    position: absolute;
+                    top: 5px;
+                    right: 6px;
+                    transition: all 200ms;
+                    font-size: 40px;
+                    color: $orange;
+                  }
+                div.content {
+                    max-height: 30%;
+                    overflow: auto;
+                    h4{
+                        color:$brown;
+                        font-size: 20px;
+                        padding:10px 0;
+                    }
+                    p{
+                        color:$brown;
+                    }
+                  }
+              }
+          }
+        
+        div.input{
+            position: relative;
+            label{
+                color:$brown;
+            }
+
+            a.hint{
+                color:$orange;
+                display:block;
+                margin-top: 10px;
+            }
+
+
+            input[type="text"],input[type="password"]{
+                width:250px;
+                height:22px;
+                border:1px solid #ccc;
+                outline: none;
+            }
+
+            input.email{
+                margin-bottom: 30px;
+            }
+
+            i{
+                color:#d6d6d6;
+                position:absolute;
+                left:2%;
+            }
+
+            i.lock{
+                top:49%;
+            }
+        }
+        div.btn-item{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+            button.btn{
+                border:none;
+                // padding:8px 30px;
+                width: 100px;
+                height: 30px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            button.btn-enter{
+                background:#F56C23;
+                color:#fff;
+                &:hover{
+                    background:#fff;
+                    color:#F56C23;
+                    transform: scale(1.05)
+                }
+            }
+        }
+    }
+}

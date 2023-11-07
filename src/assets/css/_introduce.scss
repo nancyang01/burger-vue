@@ -1,0 +1,151 @@
+div.recipe{
+  position: relative;
+
+  h3{
+      color:$brown;    
+      text-align: center;
+      font-size: $h3-fz;
+      margin: 20px 0;
+      line-height: 1.5;
+
+      @include ipad{
+          font-size: 26px;
+
+      }
+
+      @include iphone{
+          font-size: 20px;
+
+      }
+
+      &::before{
+          content:"";
+          display:block;
+          width:110px;
+          height:1px;
+          background-color:#3D1101;
+          position: absolute;
+          top:5%;
+          left:28%;
+
+          @include ipad{
+              top:2%;
+              left:20%;
+
+          }
+          @include iphone{
+              top:2%;
+              left:10%;
+              width:55px;
+          }
+      }
+      &::after{
+          content:"";
+          display:block;
+          width:110px;
+          height:1px;
+          background-color:#3D1101;
+          position: absolute;
+          top:5%;
+          right:28%;
+
+          @include ipad{
+              top:2%;
+              right:20%;
+          }
+          @include iphone{
+              top:2%;
+              right:10%;
+              width:55px;
+          }
+      }
+
+  }
+  p{
+      color:$brown; 
+      line-height: 1.2; 
+
+      @include ipad{
+          font-size: 24px;
+      }
+      @include iphone{
+          font-size: 16px;
+
+      }
+  }
+  ul.recipe-item{
+      display:flex;
+      justify-content: space-around;
+
+      li{
+          width:300px;
+          padding:40px 20px;
+          img{
+              display: block;
+              margin: 0 auto;
+              border-radius: 50%;
+
+          }
+          @include ipad{
+              margin: 0 auto;
+          }
+
+          @include iphone{
+              margin: 0 auto;
+          }
+      }
+      @include ipad{
+          display:block;
+
+      }
+  }
+}
+div.chef{
+  background: $brown;
+
+  div.chef-item{
+      display: flex;
+
+      img{
+          display: block;
+          margin:0 auto;
+          @include iphone{
+              width:85%;
+          }
+      }
+
+      div.introduce{
+          width: 500px;
+          margin-top: 100px;
+          margin-right: 200px;
+          h3{
+              color:#fff;
+              font-size: $h3-fz;
+              margin: 10px 0px;
+              line-height: 1.5;
+              span{
+                  font-size: 16px;
+              }
+
+          }
+          p{
+              color:#fff;
+              line-height: 1.5;
+              padding-bottom: 10px;
+          }
+          @include ipad{
+              margin: 0 auto;
+          }
+
+          @include iphone{
+              width:auto;
+              margin:0px 30px;
+          }
+
+      }
+
+      @include ipad{
+          display:block;
+      }
+  }
+}
